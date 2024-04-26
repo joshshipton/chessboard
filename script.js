@@ -46,17 +46,17 @@ async function bfs(endX, endY) {
         if(!destinationReached){
         setTimeout(() => {
           chessboard.children[newY * 8 + newX].classList.add('knight');
-        }, (steps + 1) * 500);
+        },  500);
     }
 
         setTimeout(() => {
           if (newX !== endX || newY !== endY) {
             chessboard.children[newY * 8 + newX].classList.remove('knight');
           }
-        }, (steps + 1) * 2500);
+        },  2500);
 
         // Wait for 500ms before proceeding to the next step
-        await new Promise(resolve => setTimeout(resolve, 100));
+        await new Promise(resolve => setTimeout(resolve, 200));
       }
     }
   }
